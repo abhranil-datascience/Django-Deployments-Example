@@ -1,0 +1,18 @@
+{% extends "CustomUserApp/Base.html" %}
+{% block independent_content %}
+  <div class="jumbotron">
+    <h1>Welcome To CustomUserApp !!</h1><br>
+    <table>
+      <tbody>
+        <tr>
+          <td id="link_to_signup_page"><a href="{% url 'CustomUserApp:LoginPage'%}">Click Me</a></td>
+          <td id="description_to_sign_up">to go to login page</td>
+        </tr>
+        <tr>
+          <td id="link_to_signup_page"><a href="{% url 'CustomUserApp:RegistrationPage'%}">Click Me</a></td>
+          <td id="description_to_sign_up">to go to Signup page</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+{% endblock %}

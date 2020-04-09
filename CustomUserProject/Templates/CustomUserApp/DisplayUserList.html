@@ -1,0 +1,26 @@
+{% extends "CustomUserApp/Base.html" %}
+{% block independent_content %}
+<div class="jumbotron">
+  <h1 id="RegUsersHeading">List Of Registered Users</h1><br>
+  {% if userlist %}
+  <table align=center>
+    <thead>
+      <th id="UserTable"><strong>First Name</strong></th>
+      <th id="UserTable"><strong>Last Name</strong></th>
+      <th id="UserTable"><strong>Email</strong></th>
+    </thead>
+    <tbody>
+      {% for user in userlist %}
+        <tr>
+          <td id="UserTable">{{ user.first_name }}</td>
+          <td id="UserTable">{{ user.last_name }}</td>
+          <td id="UserTable">{{ user.email }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+    <p>Uh Oh!! No users to display</p>
+  {% endif %}
+</div>
+{% endblock %}

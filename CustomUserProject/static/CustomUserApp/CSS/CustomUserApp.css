@@ -1,0 +1,38 @@
+a{
+  color: red;
+  font-weight:400;
+  font-size: 20px;
+}
+#register_button,#login_button{
+  text-align: center;
+  font-weight:400;
+  font-size: 20px;
+}
+p input{
+  border: 2px solid blue;
+  border-radius: 4px;
+  width: 210px;
+}
+label{
+  width: 120px;
+}
+ul,li{
+  color:red;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+}
+.ErrorMessage{
+  color:red;
+}
+#RegUsersHeading,{
+  text-align: center;
+  color: blue;
+}
+#UserTable{
+  border: 2px solid maroon;
+  text-align:center;
+  padding: 4px;
+  margin: 4px;
+}

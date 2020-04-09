@@ -1,0 +1,25 @@
+{% extends "CustomUserApp/Base.html" %}
+{% block independent_content %}
+  <div class="jumbotron">
+    {% if registration_success %}
+      <h2>Thanks for Registering !!</h2><br>
+    {% else %}
+      {% if error_message %}
+        <h2>Fill out the below form for registration.</h2><br>
+        <p class="ErrorMessage">{{ error_message }}</p><br>
+        <form class="RegistrationForm" method="post" enctype="multipart/form-data">
+          {{ registration_form.as_p }}
+          {% csrf_token %}
+          <input type="submit" value="Register", class="btn btn-primary register_button">
+        </form>
+      {% else %}
+        <h2>Fill out the below form for registration.</h2><br>
+        <form class="RegistrationForm" method="post" enctype="multipart/form-data">
+          {{ registration_form.as_p }}
+          {% csrf_token %}
+          <input type="submit" value="Register", class="btn btn-primary register_button">
+        </form>
+      {% endif %}
+    {% endif %}
+  </div>
+{% endblock %}

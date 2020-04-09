@@ -1,0 +1,26 @@
+{% extends "CustomUserApp/Base.html" %}
+{% block independent_content %}
+<div class="jumbotron">
+  {% if login_success %}
+    <h2>Login Successful !!</h2><br>
+  {% else %}
+    {% if error_message %}
+      <h2>Enter Login details here.</h2><br>
+      <p class="ErrorMessage">{{ error_message }}</p><br>
+      <form class="LoginForm" method="post">
+        {{ login_form.as_p }}
+        {% csrf_token %}
+        <input type="submit" value="login", class="btn btn-primary login_button">
+      </form>
+    {% else %}
+      <h2>Enter Login details here.</h2><br>
+      <form class="LoginForm" method="post">
+        {{ login_form.as_p }}
+        {% csrf_token %}
+        <input type="submit" value="login", class="btn btn-primary login_button">
+      </form>
+    {% endif %}
+  {% endif %}
+
+</div>
+{% endblock %}
